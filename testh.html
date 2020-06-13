@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button</title>
+</head>
+<body>
+	<pre>hihihi</pre>
+	<button class="btn" onclick="change();"><strong>DOUBLE</strong></button>
+	<pre>
+		<h1 class="text">hola</h1>
+		<h2 class="text">como</h2>
+		<h3 class="text">estas</h3>
+	</pre>
+<script type="text/javascript">
+	function multiply(text,times){
+		console.log(times);
+		var sum="";
+		for (var i=0;i<times;i++){
+			sum=sum+text;
+		}
+		return sum;
+	}
+	function double(ele,i){
+		var text = ele.innerHTML;
+		return text+'<br>'+multiply('&#9;',array[i])+text;
+	}
+	function change(){
+		var ele=document.getElementsByClassName('text');
+		for(var i=0;i<ele.length;i++)
+			ele[i].innerHTML=double(ele[i],i);
+			array[i]=array[i]+1;
+			console.log(array[i]);
+		//console.log(ele[0].innerHTML);
+	}
+	function init(){
+		console.log('init');
+		var ele=document.getElementsByClassName('text');
+		for(var i=0;i<ele.length;i++)
+			array[i]=1;
+	}
+	var array=[]
+	init()
+	console.log(array);
+</script>
+</body>
+</html>
